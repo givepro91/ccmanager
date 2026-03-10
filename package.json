@@ -1,0 +1,53 @@
+{
+  "name": "ccmanager",
+  "version": "0.1.0",
+  "description": "Manage and sync Claude Code configurations across multiple projects",
+  "type": "module",
+  "bin": {
+    "ccm": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "cli",
+    "config-management",
+    "developer-tools",
+    "ai",
+    "productivity"
+  ],
+  "author": "givepro91",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/givepro91/ccmanager.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "commander": "^13.1.0",
+    "chalk": "^5.4.1",
+    "globby": "^14.1.0",
+    "fast-glob": "^3.3.3",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "eslint": "^9.20.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
